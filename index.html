@@ -3,33 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- SEO Básico -->
+    <title>Luis Ovalle | Psicólogo General Sanitario</title>
+    <meta name="description" content="Terapia psicológica orientada a resultados. Abordaje clínico para ansiedad, depresión y desarrollo personal. Reserva tu sesión.">
+    
+    <!-- Integración de Tailwind CSS para estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración básica de colores para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Azul oscuro profesional
+                        secondary: '#3b82f6', // Azul claro para botones
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Bienvenido a mi sitio</h1>
-            <p>Página alojada gratuitamente en GitHub Pages.</p>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased leading-relaxed">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-sm p-4 w-full">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="font-bold text-xl text-primary">Luis Ovalle</div>
+            <div>
+                <span class="text-sm text-gray-500 hidden md:inline-block mr-4">Nº Colegiado: [INSERTA_TU_NUMERO]</span>
+                <a href="#contacto" class="bg-primary text-white px-4 py-2 rounded font-medium hover:bg-blue-800 transition">Agendar Cita</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white text-center py-20 px-4 shadow-sm">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+                Recupera tu bienestar emocional con terapia basada en evidencia
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+                Soy Luis Ovalle, Psicólogo General Sanitario. Te acompaño a identificar el origen de tu malestar y te proporciono herramientas prácticas para superarlo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Enlace a WhatsApp API -->
+                <a href="https://wa.me/34600000000?text=Hola%20Luis,%20me%20gustaría%20solicitar%20información%20sobre%20terapia." target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition flex justify-center items-center">
+                    Contactar por WhatsApp
+                </a>
+                <!-- Enlace a Calendly -->
+                <a href="https://calendly.com/TU_ENLACE" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition flex justify-center items-center">
+                    Reservar Sesión Online
+                </a>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="card">
-            <h2>Sobre el proyecto</h2>
-            <p>Este es el punto de partida de tu web. Puedes editar este archivo para añadir secciones, texto, imágenes o enlaces.</p>
-        </section>
+    <!-- Áreas de Intervención (Evita la ambigüedad de "cualquier problema") -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Áreas de Intervención</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-primary mb-3">Ansiedad y Estrés</h3>
+                    <p class="text-gray-600">Manejo de ataques de pánico, ansiedad generalizada, estrés laboral y pensamientos rumiantes.</p>
+                </div>
 
-        <section class="card">
-            <h2>Contacto</h2>
-            <p>Escribe aquí tu información de contacto o enlaces a redes sociales.</p>
-        </section>
-    </main>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-primary mb-3">Estado de Ánimo</h3>
+                    <p class="text-gray-600">Tratamiento para la depresión, apatía, falta de motivación y procesos de duelo.</p>
+                </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 - Todos los derechos reservados.</p>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-primary mb-3">Autoestima y Relaciones</h3>
+                    <p class="text-gray-600">Dependencia emocional, problemas de pareja, asertividad y resolución de conflictos.</p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Método de Trabajo / Por qué elegirte -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Mi Enfoque Terapéutico</h2>
+            <p class="text-gray-600 mb-6 text-left">
+                La terapia no debe ser un espacio indefinido. Trabajo desde un enfoque práctico y centrado en objetivos. En nuestras sesiones realizaremos una evaluación precisa, estableceremos un plan de acción y aplicaremos técnicas validadas científicamente para que notes cambios desde las primeras semanas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-16 px-4 bg-primary text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Da el primer paso hacia tu bienestar</h2>
+            <p class="mb-8 text-blue-100">Modalidad de terapia online disponible para pacientes en cualquier ubicación, y presencial en consulta.</p>
+            <div class="flex flex-col gap-4 items-center">
+                <p class="font-medium">Correo: <a href="mailto:tuemail@luisovalle.com" class="underline">tuemail@luisovalle.com</a></p>
+                <p class="font-medium">Teléfono: +34 600 000 000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+        <p class="text-sm">&copy; 2026 Luis Ovalle. Psicólogo General Sanitario (Col: [INSERTA_TU_NUMERO]). Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
