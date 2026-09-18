@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Básico -->
     <title>Luis Ovalle | Psicólogo General Sanitario</title>
     <meta name="description" content="Terapia psicológica profesional, cálida y minimalista en Barcelona y modalidad online. Abordaje clínico para ansiedad, depresión y desarrollo personal.">
-    
-    <!-- Fuentes de Google: Playfair Display (serif) e Inter (sans-serif) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Integración de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configuración personalizada de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-background': '#F8F5F0', // Crema
-                        'brand-beige': '#DDD4C7',      // Beige
-                        'brand-olive': '#AEB8A6',      // Verde oliva
-                        'brand-taupe': '#8A7662',      // Taupe
-                        'brand-burgundy': '#6B3F46',   // Burdeos
-                        'brand-charcoal': '#2E2C2A',   // Gris carbón (texto principal)
-                        'primary': '#6B3F46',          // Burdeos como primario
+                        'brand-background': '#F8F5F0', 
+                        'brand-beige': '#DDD4C7',      
+                        'brand-olive': '#AEB8A6',      
+                        'brand-taupe': '#8A7662',      
+                        'brand-burgundy': '#6B3F46',   
+                        'brand-charcoal': '#2E2C2A',   
+                        'primary': '#6B3F46',          
                     },
                     fontFamily: {
                         'serif': ['Playfair Display', 'serif'],
@@ -41,7 +34,6 @@
     <!-- Navegación -->
     <nav class="bg-white/80 backdrop-blur-sm shadow-sm p-4 w-full fixed top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
-            <!-- Representación del Logotipo -->
             <div class="text-center font-serif text-brand-charcoal">
                 <div class="text-5xl -mb-1">LO</div>
                 <div class="text-sm tracking-widest uppercase">LUIS OVALLE</div>
@@ -56,7 +48,6 @@
         </div>
     </nav>
 
-    <!-- Espacio para la barra de navegación fija -->
     <div class="h-28"></div>
 
     <!-- Hero Section -->
@@ -69,11 +60,9 @@
                 Soy Luis Ovalle, Psicólogo General Sanitario. Te acompaño a identificar el origen de tu malestar y te proporciono herramientas prácticas para superarlo en un entorno cálido, minimalista y profesional.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <!-- Enlace a WhatsApp API -->
                 <a href="https://wa.me/34696391056?text=Hola%20Luis,%20me%20gustaría%20solicitar%20información%20sobre%20terapia." target="_blank" class="bg-brand-burgundy text-brand-background px-8 py-3 rounded-xl font-bold hover:bg-red-950 transition flex justify-center items-center gap-2 shadow-lg">
                     <span>Contactar por WhatsApp</span>
                 </a>
-                <!-- Enlace a Calendly -->
                 <a href="https://calendly.com/luisovalle-info/sesion-55-min" target="_blank" class="bg-brand-taupe text-brand-background px-8 py-3 rounded-xl font-bold hover:bg-amber-900 transition flex justify-center items-center gap-2 shadow-lg">
                     <span>Reservar Sesión Online</span>
                 </a>
@@ -86,17 +75,14 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="font-serif text-4xl font-normal text-center text-brand-charcoal mb-16">Áreas de Intervención</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-beige">
                     <h3 class="font-serif text-2xl font-bold text-brand-burgundy mb-4">Ansiedad y Estrés</h3>
                     <p class="text-brand-charcoal/90">Manejo de ataques de pánico, ansiedad generalizada, estrés laboral y pensamientos rumiantes.</p>
                 </div>
-
                 <div class="bg-brand-olive text-brand-charcoal p-8 rounded-3xl shadow-sm border border-brand-beige">
                     <h3 class="font-serif text-2xl font-bold mb-4">Estado de Ánimo</h3>
                     <p class="text-brand-charcoal/90">Tratamiento para la depresión, apatía, falta de motivación y procesos de duelo.</p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-beige">
                     <h3 class="font-serif text-2xl font-bold text-brand-burgundy mb-4">Autoestima y Relaciones</h3>
                     <p class="text-brand-charcoal/90">Dependencia emocional, problemas de pareja, asertividad y resolución de conflictos.</p>
@@ -127,11 +113,8 @@
                     <p class="font-medium flex items-center gap-2"><span class="text-xs uppercase tracking-widest text-brand-background/60">Nº Colegiado:</span> 34183 </p>
                 </div>
             </div>
-            <!-- Submarca y Código QR -->
             <div class="flex flex-col items-center gap-10 bg-white/10 p-10 rounded-3xl">
-                <!-- Submarca -->
                 <div class="border-2 border-brand-background/40 p-4 rounded-full w-28 h-28 flex items-center justify-center font-serif text-5xl">LO</div>
-                <!-- Código QR con monograma central -->
                 <div class="relative w-40 h-40 bg-brand-charcoal p-3 rounded-lg flex items-center justify-center">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fluisovalle.com&color=F8F5F0&bgcolor=2E2C2A&qzone=1" alt="Código QR para luisovalle.com" class="w-full h-full">
                     <div class="absolute w-12 h-12 bg-brand-charcoal p-1 rounded-full flex items-center justify-center font-serif text-3xl text-brand-background">LO</div>
@@ -147,11 +130,35 @@
             <div class="flex items-center gap-2 text-sm">
                 <span>CALMA</span> · <span>CONFIANZA</span> · <span>CLARIDAD</span>
             </div>
-            <p class="text-xs opacity-60 font-sans">&copy; 2026 Luis Ovalle. Psicólogo General Sanitario. Todos los derechos reservados.</p>
+            
+            <!-- ENLACES LEGALES -->
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-sans opacity-80 mt-4">
+                <a href="aviso-legal.html" class="hover:underline">Aviso Legal</a>
+                <a href="politica-privacidad.html" class="hover:underline">Política de Privacidad</a>
+                <a href="politica-cookies.html" class="hover:underline">Política de Cookies</a>
+            </div>
+
+            <p class="text-xs opacity-60 font-sans mt-2">&copy; 2026 Luis Ovalle. Psicólogo General Sanitario (Nº Col: 34183). Todos los derechos reservados.</p>
         </div>
     </footer>
 
-</body>
-</html>
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-brand-charcoal text-brand-background p-4 text-center text-sm z-50 flex flex-col sm:flex-row justify-center items-center gap-4 hidden">
+        <p>Utilizamos cookies para analizar nuestros servicios y mejorar su experiencia. <a href="politica-cookies.html" class="underline hover:text-brand-beige">Más información</a>.</p>
+        <button onclick="acceptCookies()" class="bg-brand-burgundy px-4 py-2 rounded-md hover:bg-red-950 transition">Aceptar</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
