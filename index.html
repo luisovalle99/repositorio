@@ -5,110 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Básico -->
     <title>Luis Ovalle | Psicólogo General Sanitario</title>
-    <meta name="description" content="Terapia psicológica orientada a resultados. Abordaje clínico para ansiedad, depresión y desarrollo personal. Reserva tu sesión.">
+    <meta name="description" content="Terapia psicológica profesional, cálida y minimalista en [Tu Ciudad]. Abordaje clínico para ansiedad, depresión y desarrollo personal.">
     
-    <!-- Integración de Tailwind CSS para estilos -->
+    <!-- Fuentes de Google: Playfair Display (serif) e Inter (sans-serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Integración de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuración básica de colores para Tailwind -->
+    <!-- Configuración personalizada de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1e3a8a', // Azul oscuro profesional
-                        secondary: '#3b82f6', // Azul claro para botones
+                        'brand-background': '#F8F5F0', // Crema
+                        'brand-beige': '#DDD4C7',      // Beige
+                        'brand-olive': '#AEB8A6',      // Verde oliva
+                        'brand-taupe': '#8A7662',      // Taupe
+                        'brand-burgundy': '#6B3F46',   // Burdeos
+                        'brand-charcoal': '#2E2C2A',   // Gris carbón (texto principal)
+                        'primary': '#6B3F46',          // Burdeos como primario
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased leading-relaxed">
+<body class="bg-brand-background text-brand-charcoal font-sans antialiased leading-relaxed">
 
     <!-- Navegación -->
-    <nav class="bg-white shadow-sm p-4 w-full">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <div class="font-bold text-xl text-primary">Luis Ovalle</div>
+    <nav class="bg-white/80 backdrop-blur-sm shadow-sm p-4 w-full fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+            <!-- Representación del Logotipo -->
+            <div class="text-center font-serif text-brand-charcoal">
+                <div class="text-5xl -mb-1">LO</div>
+                <div class="text-sm tracking-widest uppercase">LUIS OVALLE</div>
+                <div class="border-b border-brand-charcoal w-20 mx-auto my-1"></div>
+                <div class="text-xs tracking-widest font-sans uppercase">Psicólogo General Sanitario</div>
+            </div>
             <div>
-                <span class="text-sm text-gray-500 hidden md:inline-block mr-4">Nº Colegiado: 34183 </span>
-                <a href="#contacto" class="bg-primary text-white px-4 py-2 rounded font-medium hover:bg-blue-800 transition">Agendar Cita</a>
+                <a href="#contacto" class="bg-brand-burgundy text-brand-background px-5 py-2.5 rounded-lg font-semibold hover:bg-red-950 transition flex items-center gap-2">
+                    <span class="text-xs uppercase tracking-widest">Agendar Cita</span>
+                </a>
             </div>
         </div>
     </nav>
 
+    <!-- Espacio para la barra de navegación fija -->
+    <div class="h-28"></div>
+
     <!-- Hero Section -->
-    <header class="bg-white text-center py-20 px-4 shadow-sm">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+    <header class="py-24 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-serif text-5xl md:text-6xl font-normal text-brand-charcoal mb-8 leading-tight">
                 Recupera tu bienestar emocional con terapia basada en evidencia
             </h1>
-            <p class="text-lg text-gray-600 mb-8">
-                Soy Luis Ovalle, Psicólogo General Sanitario. Te acompaño a identificar el origen de tu malestar y te proporciono herramientas prácticas para superarlo.
+            <p class="text-lg text-brand-charcoal/80 mb-12 max-w-2xl mx-auto">
+                Soy Luis Ovalle, Psicólogo General Sanitario. Te acompaño a identificar el origen de tu malestar y te proporciono herramientas prácticas para superarlo en un entorno cálido, minimalista y profesional.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
                 <!-- Enlace a WhatsApp API -->
-                <a href="https://wa.me/34696391056?text=Hola%20Luis,%20me%20gustaría%20solicitar%20información%20sobre%20terapia." target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition flex justify-center items-center">
-                    Contactar por WhatsApp
+                <a href="https://wa.me/34696391056?text=Hola%20Luis,%20me%20gustaría%20solicitar%20información%20sobre%20terapia." target="_blank" class="bg-brand-burgundy text-brand-background px-8 py-3 rounded-xl font-bold hover:bg-red-950 transition flex justify-center items-center gap-2 shadow-lg">
+                    <span>Contactar por WhatsApp</span>
                 </a>
                 <!-- Enlace a Calendly -->
-                <a href="https://calendly.com/luisovalle-info/sesion-55-min" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition flex justify-center items-center">
-                    Reservar Sesión Online
+                <a href="https://calendly.com/luisovalle-info/sesion-55-min" target="_blank" class="bg-brand-taupe text-brand-background px-8 py-3 rounded-xl font-bold hover:bg-amber-900 transition flex justify-center items-center gap-2 shadow-lg">
+                    <span>Reservar Sesión Online</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Áreas de Intervención (Evita la ambigüedad de "cualquier problema") -->
-    <section class="py-16 px-4 bg-gray-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Áreas de Intervención</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Áreas de Intervención (Actualizada con colores) -->
+    <section class="py-20 px-4 bg-white/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-4xl font-normal text-center text-brand-charcoal mb-16">Áreas de Intervención</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-xl font-bold text-primary mb-3">Ansiedad y Estrés</h3>
-                    <p class="text-gray-600">Manejo de ataques de pánico, ansiedad generalizada, estrés laboral y pensamientos rumiantes.</p>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-beige">
+                    <h3 class="font-serif text-2xl font-bold text-brand-burgundy mb-4">Ansiedad y Estrés</h3>
+                    <p class="text-brand-charcoal/90">Manejo de ataques de pánico, ansiedad generalizada, estrés laboral y pensamientos rumiantes.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-xl font-bold text-primary mb-3">Estado de Ánimo</h3>
-                    <p class="text-gray-600">Tratamiento para la depresión, apatía, falta de motivación y procesos de duelo.</p>
+                <div class="bg-brand-olive text-brand-charcoal p-8 rounded-3xl shadow-sm border border-brand-beige">
+                    <h3 class="font-serif text-2xl font-bold mb-4">Estado de Ánimo</h3>
+                    <p class="text-brand-charcoal/90">Tratamiento para la depresión, apatía, falta de motivación y procesos de duelo.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-xl font-bold text-primary mb-3">Autoestima y Relaciones</h3>
-                    <p class="text-gray-600">Dependencia emocional, problemas de pareja, asertividad y resolución de conflictos.</p>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-beige">
+                    <h3 class="font-serif text-2xl font-bold text-brand-burgundy mb-4">Autoestima y Relaciones</h3>
+                    <p class="text-brand-charcoal/90">Dependencia emocional, problemas de pareja, asertividad y resolución de conflictos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Método de Trabajo / Por qué elegirte -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Mi Enfoque Terapéutico</h2>
-            <p class="text-gray-600 mb-6 text-left">
-                La terapia no debe ser un espacio indefinido. Trabajo desde un enfoque práctico y centrado en objetivos. En nuestras sesiones realizaremos una evaluación precisa, estableceremos un plan de acción y aplicaremos técnicas validadas científicamente para que notes cambios desde las primeras semanas.
+    <!-- Método de Trabajo -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-serif text-4xl font-normal text-brand-charcoal mb-8 leading-snug">Mi Enfoque Terapéutico</h2>
+            <p class="text-brand-charcoal/80 mb-6 text-left max-w-2xl mx-auto">
+                La terapia no debe ser un espacio indefinido. Trabajo desde un enfoque práctico y centrado en objetivos. En nuestras sesiones realizaremos una evaluación precisa, estableceremos un plan de acción y aplicaremos técnicas validadas científicamente para que notes cambios desde las primeras semanas, siempre desde un espacio de calma y claridad.
             </p>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="py-16 px-4 bg-primary text-white text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-6">Da el primer paso hacia tu bienestar</h2>
-            <p class="mb-8 text-blue-100">Modalidad de terapia online disponible para pacientes en cualquier ubicación, y presencial en consulta.</p>
-            <div class="flex flex-col gap-4 items-center">
-                <p class="font-medium">Correo: <a href="mailto:info@luisovalle.com" class="underline">info@luisovalle.com</a></p>
-                <p class="font-medium">Teléfono: +34 696 39 10 56</p>
+    <!-- Sección de Contacto (Burdeos) -->
+    <section id="contacto" class="py-24 px-4 bg-brand-burgundy text-brand-background text-center">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-left">
+            <div>
+                <h2 class="font-serif text-4xl font-normal mb-8 leading-snug">Da el primer paso hacia tu bienestar</h2>
+                <p class="mb-10 text-brand-background/90 max-w-lg">Modalidad de terapia online disponible para pacientes en cualquier ubicación, y presencial en consulta.</p>
+                <div class="flex flex-col gap-5">
+                    <p class="font-medium flex items-center gap-2"><span class="text-xs uppercase tracking-widest text-brand-background/60">Correo:</span> <a href="mailto:info@luisovalle.com" class="underline">info@luisovalle.com</a></p>
+                    <p class="font-medium flex items-center gap-2"><span class="text-xs uppercase tracking-widest text-brand-background/60">Teléfono:</span> +34 600 000 000</p>
+                    <p class="font-medium flex items-center gap-2"><span class="text-xs uppercase tracking-widest text-brand-background/60">Nº Colegiado:</span> 34183 </p>
+                </div>
+            </div>
+            <!-- Submarca y Código QR (Recreados) -->
+            <div class="flex flex-col items-center gap-10 bg-white/10 p-10 rounded-3xl">
+                <!-- Submarca -->
+                <div class="border-2 border-brand-background/40 p-4 rounded-full w-28 h-28 flex items-center justify-center font-serif text-5xl">LO</div>
+                <!-- Código QR con monograma central -->
+                <div class="relative w-40 h-40 bg-brand-charcoal p-3 rounded-lg flex items-center justify-center">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fluisovalle.com&color=F8F5F0&bgcolor=2E2C2A&qzone=1" alt="Código QR para luisovalle.com" class="w-full h-full">
+                    <div class="absolute w-12 h-12 bg-brand-charcoal p-1 rounded-full flex items-center justify-center font-serif text-3xl text-brand-background">LO</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 text-center py-6">
-        <p class="text-sm">&copy; 2026 Luis Ovalle. Psicólogo General Sanitario (Col: 34183). Todos los derechos reservados.</p>
+    <!-- Footer (Burdeos) -->
+    <footer class="bg-red-950 text-brand-background text-center py-10 px-4">
+        <div class="max-w-3xl mx-auto flex flex-col items-center gap-6">
+            <p class="text-xs uppercase tracking-widest font-sans opacity-70">MINIMAL · CÁLIDA · PROFESIONAL</p>
+            <div class="flex items-center gap-2 text-sm">
+                <span>CALMA</span> · <span>CONFIANZA</span> · <span>CLARIDAD</span>
+            </div>
+            <p class="text-xs opacity-60 font-sans">&copy; 2026 Luis Ovalle. Psicólogo General Sanitario. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
