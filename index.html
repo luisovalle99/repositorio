@@ -6,19 +6,22 @@
     <title>Luis Ovalle | Psicólogo General Sanitario</title>
     <meta name="description" content="Terapia psicológica afirmativa y contextual en Barcelona. Espacio seguro y despatologizador.">
     
-    <!-- Tipografía Editorial Premium -->
+    <!-- Tipografía Editorial Premium (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     
     <style>
+        /* Paleta inspirada en bienestar y neurodivergencia (Bajo contraste agresivo) */
         :root {
-            --bg-base: #FAF9F6;
-            --bg-alt: #EFECE7;
-            --text-main: #2D2A2B;
-            --text-light: #5C5759;
-            --accent: #4A675C; /* Verde bosque suave */
-            --accent-hover: #374D45;
+            --bg-base: #F9F8F6; /* Hueso/Avena */
+            --bg-alt: #EFECE7; /* Gris arena cálido */
+            --text-main: #3A3238; /* Carbón/Berenjena oscuro */
+            --text-light: #6E666C; 
+            --accent: #D28F79; /* Terracota empolvado (Similar al rosa/coral de Alicia) */
+            --accent-hover: #BD7C67;
+            --secondary-accent: #6C8A7B; /* Verde salvia para contrastes */
+            --border-radius: 12px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,141 +30,228 @@
             font-family: 'Inter', sans-serif; 
             background-color: var(--bg-base); 
             color: var(--text-main); 
-            line-height: 1.6; 
+            line-height: 1.7; 
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Tipografía de Titulares */
+        /* --- Tipografía H1/H2 --- */
         h1, h2, h3, .logo { 
             font-family: 'Lora', serif; 
             font-weight: 500;
             color: var(--text-main);
+            letter-spacing: -0.02em;
         }
 
-        /* Navegación */
+        /* --- Navegación (Sticky Header) --- */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 5%;
-            background-color: var(--bg-base);
+            padding: 25px 8%;
+            background-color: rgba(249, 248, 246, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .logo { font-size: 1.5rem; text-decoration: none; }
+        .logo { font-size: 1.4rem; text-decoration: none; }
         
         .nav-links a {
             text-decoration: none;
             color: var(--text-light);
-            margin-left: 30px;
-            font-size: 0.9rem;
+            margin-left: 35px;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s;
         }
         .nav-links a:hover { color: var(--accent); }
 
-        /* Sección Hero (Principal) */
+        /* --- Botones --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 16px 36px;
+            text-decoration: none;
+            border-radius: 30px; /* Botones píldora (estilo moderno) */
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+        
+        .btn:hover { 
+            background-color: var(--accent-hover); 
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(210, 143, 121, 0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-main);
+        }
+        .btn-outline:hover {
+            background-color: var(--text-main);
+            color: white;
+        }
+
+        /* --- Sección Hero (Inmersiva) --- */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-height: 80vh;
-            padding: 0 5%;
+            padding: 80px 8% 100px;
+            min-height: 85vh;
+            gap: 50px;
         }
 
-        .hero-text {
+        .hero-content {
             flex: 1;
-            padding-right: 50px;
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--bg-alt);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: var(--secondary-accent);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .hero h1 i { font-style: italic; color: var(--accent); }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--text-light);
             margin-bottom: 40px;
-            max-width: 500px;
+        }
+
+        /* --- Contenedor de Imagen de Autoridad --- */
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
         }
 
         .hero-image {
-            flex: 1;
-            height: 600px;
-            background-color: #D1CEC7; /* Espacio para tu foto profesional */
-            border-radius: 12px;
-            background-image: url('https://via.placeholder.com/600x800?text=Tu+Foto+Profesional+Aquí');
+            width: 100%;
+            max-width: 500px;
+            height: 650px;
+            background-color: #E2DDD5;
+            border-radius: 20px 20px 20px 200px; /* Forma orgánica tipo "gota" muy usada en web premium */
+            overflow: hidden;
+            /* AQUÍ DEBES PONER LA URL DE TU FOTO */
+            background-image: url('https://via.placeholder.com/500x650?text=Tu+Foto+Aquí'); 
             background-size: cover;
             background-position: center;
         }
 
-        /* Botones */
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
+        /* --- Frase Destacada (Estilo Elementor Quote) --- */
+        .quote-section {
+            background-color: var(--secondary-accent);
             color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            border-radius: 4px; /* Borde menos redondeado, más elegante */
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-        .btn:hover { background-color: var(--accent-hover); }
-
-        /* Sección Servicios */
-        .services {
-            background-color: var(--bg-alt);
-            padding: 100px 5%;
             text-align: center;
+            padding: 100px 5%;
         }
 
-        .services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 60px;
+        .quote-section h2 {
+            font-size: 2.8rem;
+            color: white;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.3;
         }
+
+        /* --- Servicios (Tarjetas con Sombra) --- */
+        .services {
+            padding: 120px 8%;
+            background-color: var(--bg-base);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .services-header h2 { font-size: 3rem; }
 
         .grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            justify-content: center;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
-            background: var(--bg-base);
+            background: white;
             padding: 50px 40px;
-            border-radius: 8px;
-            flex: 1;
-            text-align: left;
-        }
-
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
-        .card p { color: var(--text-light); margin-bottom: 20px; font-size: 0.95rem;}
-        .price { font-weight: 500; font-size: 1.1rem; color: var(--text-main); border-top: 1px solid #EFECE7; padding-top: 20px;}
-
-        /* Footer */
-        footer {
-            padding: 50px 5%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03); /* Sombra muy suave */
+            transition: transform 0.3s ease;
             text-align: center;
-            color: var(--text-light);
-            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        footer a { color: var(--text-light); text-decoration: none; margin: 0 10px; }
 
-        /* Responsive */
+        .card:hover { transform: translateY(-10px); }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 { font-size: 1.6rem; margin-bottom: 15px; }
+        
+        .card p { 
+            color: var(--text-light); 
+            margin-bottom: 30px; 
+            font-size: 0.95rem;
+            flex-grow: 1; /* Empuja el botón hacia abajo */
+        }
+        
+        .price { 
+            font-weight: 600; 
+            font-size: 1.1rem; 
+            color: var(--accent); 
+            margin-bottom: 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--bg-alt);
+            padding: 80px 8% 40px;
+            text-align: center;
+        }
+        
+        footer p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 20px;}
+        footer a { color: var(--text-main); text-decoration: none; margin: 0 15px; font-size: 0.85rem;}
+
+        /* --- Responsive --- */
         @media (max-width: 900px) {
-            .hero { flex-direction: column-reverse; text-align: center; padding-top: 40px; }
-            .hero-text { padding-right: 0; margin-top: 40px; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero-image { width: 100%; height: 400px; }
-            .grid { flex-direction: column; }
-            .nav-links { display: none; } /* Ocultar menú en móvil para simplificar el código base */
+            .hero { flex-direction: column-reverse; padding-top: 50px; text-align: center; }
+            .hero-content { padding-right: 0; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-image-wrapper { justify-content: center; width: 100%; }
+            .hero-image { height: 450px; border-radius: 20px; }
+            .quote-section h2 { font-size: 2rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -172,40 +262,71 @@
         <div class="nav-links">
             <a href="#enfoque">Enfoque</a>
             <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#contacto" class="btn" style="padding: 10px 24px; color: white;">Reserva tu cita</a>
         </div>
     </nav>
 
+    <!-- Sección HERO principal -->
     <header class="hero">
-        <div class="hero-text">
+        <div class="hero-content">
+            <span class="hero-tag">Psicólogo General Sanitario</span>
             <h1>Terapia psicológica <i>afirmativa</i> y contextual.</h1>
-            <p>Un espacio seguro y despatologizador en Barcelona. No necesitas un diagnóstico clínico para empezar a entender y flexibilizar tu contexto.</p>
-            <a href="https://wa.me/34600000000?text=Hola%20Luis,%20me%20gustaría%20solicitar%20una%20primera%20sesión." target="_blank" class="btn">Solicitar sesión (WhatsApp)</a>
+            <p>Un espacio seguro y despatologizador en Barcelona y Online. No necesitas un diagnóstico clínico para empezar a entender y flexibilizar tu contexto.</p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="https://wa.me/34600000000?text=Hola%20Luis,%20me%20gustaría%20solicitar%20una%20primera%20sesión." target="_blank" class="btn">Solicitar primera sesión</a>
+                <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+            </div>
         </div>
-        <!-- IMPORTANTE: Sustituye la URL en el CSS (.hero-image) por una foto tuya de alta calidad -->
-        <div class="hero-image"></div>
+        <div class="hero-image-wrapper">
+            <!-- RECUERDA: La imagen es crucial. Sube una foto tuya profesional a la carpeta de tu web. -->
+            <div class="hero-image"></div>
+        </div>
     </header>
 
+    <!-- Frase Destacada de Autoridad -->
+    <section class="quote-section" id="enfoque">
+        <h2>"Entender y validar la diversidad de realidades es lo que realmente sana."</h2>
+    </section>
+
+    <!-- Sección de Servicios (Diseño de Tarjetas) -->
     <section id="servicios" class="services">
-        <h2>Modalidades de terapia</h2>
+        <div class="services-header">
+            <h2>Diferentes formas de empezar</h2>
+            <p style="color: var(--text-light); max-width: 600px; margin: 20px auto 0;">Si estás buscando un profesional con una visión integradora y afirmativa, este es el lugar.</p>
+        </div>
+        
         <div class="grid">
+            <!-- Tarjeta 1 -->
             <div class="card">
+                <div class="card-icon">🛋️</div>
                 <h3>Terapia Presencial</h3>
-                <p>Sesiones de 50 minutos en el centro de Barcelona. Abordaje de estresores minoritarios y desarrollo de flexibilidad psicológica mediante Terapia de Aceptación y Compromiso (ACT).</p>
+                <p>Sesiones de 50 minutos en Barcelona. Abordaje de estresores minoritarios y desarrollo de flexibilidad psicológica en un entorno seguro.</p>
                 <div class="price">60€ / sesión</div>
+                <a href="https://wa.me/34600000000?text=Info%20Presencial" target="_blank" class="btn btn-outline" style="width: 100%;">Reservar presencial</a>
             </div>
+            
+            <!-- Tarjeta 2 -->
             <div class="card">
+                <div class="card-icon">💻</div>
                 <h3>Terapia Online</h3>
-                <p>El mismo encuadre y rigor clínico adaptado a tu entorno seguro. Ideal para personas neurodivergentes que prefieren el control sobre sus estímulos ambientales durante la sesión.</p>
+                <p>El mismo encuadre clínico adaptado a tu entorno. Ideal para personas neurodivergentes que prefieren el control sobre sus estímulos ambientales.</p>
                 <div class="price">60€ / sesión</div>
+                <a href="https://wa.me/34600000000?text=Info%20Online" target="_blank" class="btn btn-outline" style="width: 100%;">Reservar online</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>Luis Ovalle - Psicólogo General Sanitario (Col. 34183)</p>
+    <!-- Footer -->
+    <footer id="contacto">
+        <p><strong>Luis Ovalle</strong> - Psicólogo General Sanitario (Nº Col. 34183)</p>
+        <p>Barcelona | Terapia Online</p>
         <br>
-        <a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a>
+        <nav style="background: transparent; border: none; padding: 0; justify-content: center; backdrop-filter: none;">
+            <a href="#">Aviso Legal</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Política de Cookies</a>
+        </nav>
+        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">© 2026 Luis Ovalle. Todos los derechos reservados.</p>
     </footer>
 
 </body>
