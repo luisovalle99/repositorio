@@ -4,261 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Ovalle | Psicólogo General Sanitario</title>
-    <meta name="description" content="Terapia psicológica en Barcelona. Un espacio seguro, sin etiquetas y a tu medida.">
+    <meta name="description" content="Terapia psicológica en Barcelona. Un espacio seguro, cálido y a tu medida.">
     
+    <!-- Carga de tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --bg-base: #F9F8F6;
-            --bg-alt: #EFECE7;
-            --text-main: #3A3238;
-            --text-light: #6E666C; 
-            --accent: #D28F79;
-            --accent-hover: #BD7C67;
-            --secondary-accent: #6C8A7B;
-            --border-radius: 12px;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--bg-base); 
-            color: var(--text-main); 
-            line-height: 1.7; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, .logo { 
-            font-family: 'Lora', serif; 
-            font-weight: 500;
-            color: var(--text-main);
-            letter-spacing: -0.02em;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 8%;
-            background-color: rgba(249, 248, 246, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .logo { font-size: 1.4rem; text-decoration: none; }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            margin-left: 35px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent); }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 16px 36px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            cursor: pointer;
-        }
-        
-        .btn:hover { 
-            background-color: var(--accent-hover); 
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(210, 143, 121, 0.2);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--text-main);
-        }
-        .btn-outline:hover {
-            background-color: var(--text-main);
-            color: white;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px 8% 100px;
-            min-height: 85vh;
-            gap: 50px;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background-color: var(--bg-alt);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-            color: var(--secondary-accent);
-        }
-
-        .hero h1 {
-            font-size: 3.8rem;
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 i { font-style: italic; color: var(--accent); }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-light);
-            margin-bottom: 40px;
-        }
-
-        .hero-image-wrapper {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            height: 650px;
-            background-color: #E2DDD5;
-            border-radius: 20px 20px 20px 200px;
-            overflow: hidden;
-            background-image: url('https://via.placeholder.com/500x650?text=Tu+Foto+Aquí'); 
-            background-size: cover;
-            background-position: center;
-        }
-
-        .quote-section {
-            background-color: var(--secondary-accent);
-            color: white;
-            text-align: center;
-            padding: 100px 5%;
-        }
-
-        .quote-section h2 {
-            font-size: 2.8rem;
-            color: white;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.3;
-        }
-
-        .services {
-            padding: 120px 8%;
-            background-color: var(--bg-base);
-        }
-
-        .services-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .services-header h2 { font-size: 3rem; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: white;
-            padding: 50px 40px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-            transition: transform 0.3s ease;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .card:hover { transform: translateY(-10px); }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .card h3 { font-size: 1.6rem; margin-bottom: 15px; }
-        
-        .card p { 
-            color: var(--text-light); 
-            margin-bottom: 30px; 
-            font-size: 0.95rem;
-            flex-grow: 1;
-        }
-        
-        .price { 
-            font-weight: 600; 
-            font-size: 1.1rem; 
-            color: var(--accent); 
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: var(--bg-alt);
-            padding: 80px 8% 40px;
-            text-align: center;
-        }
-        
-        footer p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 20px;}
-        footer a { color: var(--text-main); text-decoration: none; margin: 0 15px; font-size: 0.85rem;}
-
-        @media (max-width: 900px) {
-            .hero { flex-direction: column-reverse; padding-top: 50px; text-align: center; }
-            .hero-content { padding-right: 0; }
-            .hero h1 { font-size: 2.8rem; }
-            .hero-image-wrapper { justify-content: center; width: 100%; }
-            .hero-image { height: 450px; border-radius: 20px; }
-            .quote-section h2 { font-size: 2rem; }
-            .nav-links { display: none; }
-        }
-    </style>
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">Luis Ovalle.</a>
+        <a href="index.html" class="logo">Luis Ovalle.</a>
         <div class="nav-links">
-            <a href="#enfoque">Enfoque</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto" class="btn" style="padding: 10px 24px; color: white;">Reserva tu cita</a>
+            <a href="#enfoque">Mi enfoque</a>
+            <a href="#servicios">Cómo te ayudo</a>
+            <a href="#contacto" class="btn" style="padding: 10px 24px; color: white;">Hablemos</a>
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
             <span class="hero-tag">Psicólogo General Sanitario</span>
-            <h1>Terapia psicológica a tu medida. <i>Sin etiquetas.</i></h1>
-            <p>Un lugar seguro en Barcelona y online. No necesitas tener un trastorno para venir a terapia: basta con querer entenderte, aliviar el malestar y aprender a manejar lo que te pasa.</p>
+            <h1>Terapia a tu medida. <br><i>Sin etiquetas.</i></h1>
+            <p>Un lugar seguro y cálido. No necesitas tener un diagnóstico grave para venir a terapia: a veces basta con querer entenderte, aliviar el malestar o aprender a manejar lo que sientes en un espacio donde puedes ser tú al 100%.</p>
             <div style="display: flex; gap: 20px; flex-wrap: wrap;">
                 <a href="https://wa.me/34600000000?text=Hola%20Luis,%20me%20gustaría%20solicitar%20una%20primera%20sesión." target="_blank" class="btn">Solicitar primera sesión</a>
                 <a href="#servicios" class="btn btn-outline">Ver opciones</a>
@@ -270,30 +41,30 @@
     </header>
 
     <section class="quote-section" id="enfoque">
-        <h2>"No hay una única forma correcta de vivir o de sentir. Entender tu realidad es el primer paso."</h2>
+        <h2>"No hay una única forma correcta de vivir o de sentir. Entender y validar tu realidad es el primer paso."</h2>
     </section>
 
     <section id="servicios" class="services">
         <div class="services-header">
             <h2>Cómo podemos trabajar</h2>
-            <p style="color: var(--text-light); max-width: 600px; margin: 20px auto 0;">Si buscas a alguien que te escuche sin juzgarte y respete tu forma de ser, este es el lugar.</p>
+            <p style="color: var(--text-light); max-width: 600px; margin: 20px auto 0;">Si buscas a alguien que te escuche sin juzgarte y respete tus ritmos, estoy aquí para acompañarte.</p>
         </div>
         
         <div class="grid">
             <div class="card">
                 <div class="card-icon">🛋️</div>
                 <h3>Terapia Presencial</h3>
-                <p>Sesiones de 50 minutos en Barcelona. Hablaremos de lo que te preocupa y del peso que a veces supone el entorno (LGTBIQA+, neurodivergencias). Aprenderás herramientas prácticas para tu día a día.</p>
+                <p>Nos vemos en mi consulta en Barcelona. Hablaremos de lo que te preocupa, de tu identidad y de tus propios valores. Un espacio de calma donde aprenderás herramientas prácticas para cuidarte en tu día a día.</p>
                 <div class="price">60€ / sesión</div>
-                <a href="https://wa.me/34600000000?text=Info%20Presencial" target="_blank" class="btn btn-outline" style="width: 100%;">Reservar presencial</a>
+                <a href="https://wa.me/34600000000?text=Hola%20Luis,%20quiero%20información%20sobre%20terapia%20presencial" target="_blank" class="btn btn-outline" style="width: 100%;">Reservar presencial</a>
             </div>
             
             <div class="card">
                 <div class="card-icon">💻</div>
                 <h3>Terapia Online</h3>
-                <p>Sesiones profesionales desde donde tú elijas. Ideal si prefieres la comodidad de tu casa o necesitas controlar tu propio espacio, luces y ruidos para sentirte a gusto durante la sesión.</p>
+                <p>Hablamos desde donde tú elijas. Ideal si prefieres la comodidad de tu casa o si necesitas controlar tu propio espacio, luces y ruidos para sentirte totalmente a gusto durante nuestro rato juntos.</p>
                 <div class="price">60€ / sesión</div>
-                <a href="https://wa.me/34600000000?text=Info%20Online" target="_blank" class="btn btn-outline" style="width: 100%;">Reservar online</a>
+                <a href="https://wa.me/34600000000?text=Hola%20Luis,%20quiero%20información%20sobre%20terapia%20online" target="_blank" class="btn btn-outline" style="width: 100%;">Reservar online</a>
             </div>
         </div>
     </section>
@@ -303,13 +74,13 @@
         <p>Barcelona | Terapia Online</p>
         <br>
         <nav style="background: transparent; border: none; padding: 0; justify-content: center; backdrop-filter: none;">
-            <a href="#">Aviso Legal</a>
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Política de Cookies</a>
+            <!-- Estas páginas deberán crearse en el futuro -->
+            <a href="aviso-legal.html">Aviso Legal</a>
+            <a href="politica-privacidad.html">Política de Privacidad</a>
+            <a href="politica-cookies.html">Política de Cookies</a>
         </nav>
         <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">© 2026 Luis Ovalle. Todos los derechos reservados.</p>
     </footer>
 
 </body>
-</html>
 </html>
