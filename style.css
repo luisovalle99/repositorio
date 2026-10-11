@@ -36,12 +36,12 @@ h1, h2, h3, h4, .logo {
     letter-spacing: -0.01em;
 }
 
-/* 1. NAVEGACIÓN COMPACTA (Estilo Forapsico) */
+/* Navegación horizontal en una sola línea */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 8%;
+    padding: 18px 8%;
     background-color: rgba(249, 248, 246, 0.96);
     backdrop-filter: blur(8px);
     position: sticky;
@@ -55,12 +55,13 @@ nav {
     text-decoration: none;
     font-weight: 600;
     color: var(--text-main);
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
 }
 
 .nav-links a {
@@ -69,6 +70,7 @@ nav {
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -90,6 +92,7 @@ nav {
     border: 1px solid transparent;
     cursor: pointer;
     text-align: center;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -108,7 +111,7 @@ nav {
     color: #FFFFFF !important;
 }
 
-/* 2. CABECERA / HERO COMPACTO */
+/* Hero / Portada */
 .hero {
     display: flex;
     align-items: center;
@@ -178,7 +181,7 @@ nav {
     border: 1px solid var(--border-light);
 }
 
-/* 3. CITA EDITORIAL */
+/* Cita */
 .quote-section {
     background-color: var(--secondary);
     color: #FFFFFF;
@@ -195,7 +198,7 @@ nav {
     line-height: 1.4;
 }
 
-/* 4. MARCO CLÍNICO */
+/* Marco Clínico */
 .framework-section {
     padding: 70px 8%;
     background-color: var(--bg-alt);
@@ -239,7 +242,7 @@ nav {
     font-size: 0.94rem;
 }
 
-/* 5. SERVICIOS / ESPECIALIDADES (ESTILO EDITORIAL FORAPSICO - SIN DIBUJOS) */
+/* Especialidades (Sin dibujos, estilo Forapsico) */
 .services {
     padding: 80px 8%;
     background-color: var(--bg-base);
@@ -286,8 +289,317 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: border-color 0.2s ease, transform 0.2
-        gap: 20px !important;
-        padding: 30px 20px !important;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.service-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.service-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* Proceso en pasos */
+.process-section {
+    padding: 80px 8%;
+    background-color: #FFFFFF;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.step-card {
+    padding: 30px 25px;
+    border-left: 3px solid var(--accent);
+    background-color: var(--bg-base);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.step-num {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.step-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Tarifas */
+.pricing-section {
+    padding: 80px 8%;
+    background-color: var(--bg-base);
+}
+
+.pricing-card {
+    background: #FFFFFF;
+    border-radius: var(--border-radius);
+    padding: 45px 35px;
+    max-width: 850px;
+    margin: 0 auto;
+    border: 1px solid var(--border-light);
+}
+
+.pricing-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.pricing-amount {
+    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.pricing-duration {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.pricing-note {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.modalities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.modality-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.modality-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.modality-condition {
+    color: var(--secondary) !important;
+    font-size: 0.85rem !important;
+}
+
+.pricing-cta {
+    text-align: center;
+}
+
+/* Preguntas frecuentes (Acordeón nativo) */
+.faq-section {
+    padding: 80px 8%;
+    background-color: var(--bg-alt);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 18px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    user-select: none;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 22px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--accent);
+}
+
+.faq-item[open] .faq-question::after {
+    content: '−';
+}
+
+.faq-item[open] .faq-question {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.faq-answer {
+    padding: 18px 22px;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* Contacto */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: #FFFFFF;
+    padding: 35px 25px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin-bottom: 22px;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--bg-alt);
+    padding: 50px 8% 25px;
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+}
+
+.footer-content p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.footer-legal-nav {
+    margin: 20px 0 15px;
+}
+
+.footer-legal-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.82rem;
+    transition: color 0.2s ease;
+}
+
+.footer-legal-nav a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    font-size: 0.78rem !important;
+    opacity: 0.6;
+    margin-top: 12px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        padding-top: 35px;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero-image-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+    .hero-image {
+        height: 380px;
+    }
+    .pricing-amount {
+        font-size: 2.4rem;
     }
 }
